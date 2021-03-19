@@ -1,12 +1,35 @@
 fun main() {
     println("Bem Vindo ao ByteBank")
-    val titular: String = "Rodrigo Eustáquio Duque"
-    val numeroConta: Int = 100048
-    var saldo: Double = 0.0
-    saldo = 100.0 + 2
-    saldo += 200
+    println("----------------------------------------------------------")
 
-    println("Titular: $titular")
-    println("Número da Conta: $numeroConta")
-    println("Saldo da Conta: $saldo")
+    for (i in 9 downTo 1 step 2) {
+        val titular: String = "Rodrigo Eustáquio Duque $i"
+        val numeroConta: Int = 100048 + i
+        var saldo: Double = 10.0 + i
+
+
+        println("Titular: $titular")
+        println("Número da Conta: $numeroConta")
+        println("Saldo da Conta: $saldo")
+        println("----------------------------------------------------------")
+
+
+    }
+
+
+    fun testaCondicoes(saldo: Double) {
+        if (saldo > 0.0) {
+            println("Conta é positiva")
+        } else if (saldo == 0.0) {
+            println("Conta é neutra")
+        } else {
+            println("Conta é negativa")
+        }
+
+        when {
+            saldo > 0.0 -> println("Conta é positiva")
+            saldo == 0.0 -> println("Conta é neutra")
+            else -> println("Conta é negativa")
+        }
+    }
 }
